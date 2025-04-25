@@ -71,9 +71,6 @@ const NavbarIntegrated = () => {
           <Link to="/NexusHub/internships" className="nav-link text-darkest-gray font-medium">Internships</Link>
           <Link to="/NexusHub/knowledge-Hub" className="nav-link text-darkest-gray font-medium">Knowledge Hub</Link>
           <Link to="/NexusHub/events" className="nav-link text-darkest-gray font-medium">Events</Link>
-          
-         
-          
         </div>
         
         <button 
@@ -90,12 +87,12 @@ const NavbarIntegrated = () => {
         }`}
       >
         <div className="px-4 py-2 space-y-2">
-          <Link to="/knowledge-hub" className="block py-2 text-darkest-gray hover:text-primary-color">Knowledge Hub</Link>
-          <Link to="/hall-of-fame" className="block py-2 text-darkest-gray hover:text-primary-color">Hall of Fame</Link>
-          <Link to="/internships" className="block py-2 text-darkest-gray hover:text-primary-color">Internships</Link>
-          <Link to="/alumni" className="block py-2 text-darkest-gray hover:text-primary-color">Explore Alumni</Link>
-          <Link to="/events" className="block py-2 text-darkest-gray hover:text-primary-color">Events</Link>
-          <Link to="/mentorship" className="block py-2 text-darkest-gray hover:text-primary-color">Mentorship</Link>
+          <Link to="/NexusHub/hall-Of-Fame" className="block py-2 text-darkest-gray hover:text-primary-color">Hall of Fame</Link>
+          <Link to="/NexusHub/alumni" className="block py-2 text-darkest-gray hover:text-primary-color">Explore Alumni</Link>
+          <Link to="/NexusHub/mentorship" className="block py-2 text-darkest-gray hover:text-primary-color">Mentorship</Link>
+          <Link to="/NexusHub/internships" className="block py-2 text-darkest-gray hover:text-primary-color">Internships</Link>
+          <Link to="/NexusHub/knowledge-Hub" className="block py-2 text-darkest-gray hover:text-primary-color">Knowledge Hub</Link>
+          <Link to="/NexusHub/events" className="block py-2 text-darkest-gray hover:text-primary-color">Events</Link>
         </div>
       </div>
     </nav>

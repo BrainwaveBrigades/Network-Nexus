@@ -64,6 +64,10 @@ const internshipSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  googleFormLink: {
+    type: String,
+    required: true
+  },
   alumniId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Alumni',

@@ -3,17 +3,8 @@ import { FileText, Upload, Plus, X, Check, Download } from 'lucide-react';
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import LoadingScreen from "../../components/LoadingScreen.jsx";
-
-const handleLogout = async () => {
-    try {
-        await apiAlumni.post('/logout', {}, { withCredentials: true });
-        logout(); // Use the logout function from context
-    } catch (error) {
-        console.error('Logout failed:', error);
-        // Still attempt to logout locally if server logout fails
-        logout();
-    }
-  }; 
+import apiAlumni from './api.js';
+import { useAlumniAuth } from '../../context/AlumniAuthContext.jsx';
 
 const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -25,6 +16,21 @@ const App = () => {
   const [success, setSuccess] = useState('');
   const [isUploading, setIsUploading] = useState(false);
   const [loading, setLoading] = useState(true);
+
+    const { alumni, logout, loading: authLoading } = useAlumniAuth();
+    const [alumniData, setAlumniData] = useState(null);
+    const navigate = useNavigate();
+
+    const handleLogout = async () => {
+      try {
+          await apiAlumni.post('/logout', {}, { withCredentials: true });
+          logout(); // Use the logout function from context
+      } catch (error) {
+          console.error('Logout failed:', error);
+          // Still attempt to logout locally if server logout fails
+          logout();
+      }
+    }; 
 
   const handleFileChange = (e) => {
     if (e.target.files && e.target.files[0]) {

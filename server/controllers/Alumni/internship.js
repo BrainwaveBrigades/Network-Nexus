@@ -15,6 +15,7 @@ export const createInternship = async (req, res) => {
       prerequisites,
       requiredSkills,
       deadline,
+      googleFormLink,
       alumniName,
       alumniCompany,
       alumniPosition
@@ -35,6 +36,7 @@ export const createInternship = async (req, res) => {
       prerequisites,
       requiredSkills,
       deadline,
+      googleFormLink,
       alumniId,
       alumniName,
       alumniCompany,

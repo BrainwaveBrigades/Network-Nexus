@@ -3,12 +3,16 @@ import { Search, ChevronDown, ChevronUp } from 'lucide-react';
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import LoadingScreen from "../../components/LoadingScreen.jsx";
+import apiAlumni from './api.js';
+import { useAlumniAuth } from '../../context/AlumniAuthContext.jsx';
 
 const App = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [openItems, setOpenItems] = useState([]);
   const [activeCategory, setActiveCategory] = useState('All');
   const navigate = useNavigate();
+  const { alumni, logout, loading: authLoading } = useAlumniAuth();
+  const [alumniData, setAlumniData] = useState(null);
 
   const [loading, setLoading] = useState(true);
 
@@ -35,15 +39,15 @@ const App = () => {
   }, []);  
 
     const handleLogout = async () => {
-        try {
-            await apiAlumni.post('/logout', {}, { withCredentials: true });
-            logout(); // Use the logout function from context
-        } catch (error) {
-            console.error('Logout failed:', error);
-            // Still attempt to logout locally if server logout fails
-            logout();
-        }
-      }; 
+    try {
+        await apiAlumni.post('/logout', {}, { withCredentials: true });
+        logout(); // Use the logout function from context
+    } catch (error) {
+        console.error('Logout failed:', error);
+        // Still attempt to logout locally if server logout fails
+        logout();
+    }
+  }; 
 
     if (loading) {
         return <LoadingScreen message="Loading alumni FAQ's..." />;

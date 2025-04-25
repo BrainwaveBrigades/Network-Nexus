@@ -101,13 +101,14 @@ function AlumniMentorshipForm() {
 
   const handleLogout = async () => {
     try {
-      await axios.post(`${myAPI}/alumni/logout`, {}, { withCredentials: true });
-      localStorage.removeItem('alumniToken');
-      navigate('/alumni-login');
+        await apiAlumni.post('/logout', {}, { withCredentials: true });
+        logout(); // Use the logout function from context
     } catch (error) {
-      console.error('Logout failed:', error);
+        console.error('Logout failed:', error);
+        // Still attempt to logout locally if server logout fails
+        logout();
     }
-  };
+  }; 
 
   if (loading) {
     return <LoadingScreen message="Loading add mentorships..." />;

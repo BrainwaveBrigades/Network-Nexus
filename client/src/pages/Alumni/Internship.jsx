@@ -21,6 +21,7 @@ function AlumniInternshipForm() {
     description: '',
     prerequisites: '',
     requiredSkills: '',
+    googleFormLink: '',
     deadline: ''
   });
 
@@ -97,6 +98,7 @@ function AlumniInternshipForm() {
         requiredSkills: formData.requiredSkills.split(',').map(skill => skill.trim()),
         isApproved: false,
         isMarkAsComplete: false,
+        googleFormLink: formData.googleFormLink,
         participants: []
       };
       
@@ -117,13 +119,14 @@ function AlumniInternshipForm() {
 
   const handleLogout = async () => {
     try {
-      await axios.post(`${myAPI}/alumni/logout`, {}, { withCredentials: true });
-      localStorage.removeItem('alumniToken');
-      navigate('/alumni-login');
+        await apiAlumni.post('/logout', {}, { withCredentials: true });
+        logout(); // Use the logout function from context
     } catch (error) {
-      console.error('Logout failed:', error);
+        console.error('Logout failed:', error);
+        // Still attempt to logout locally if server logout fails
+        logout();
     }
-  };
+  }; 
 
   if (loading) {
     return <LoadingScreen message="Loading add internships..." />;
@@ -293,6 +296,21 @@ function AlumniInternshipForm() {
                 onChange={handleChange}
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500"
                 placeholder="E.g. Python, C, R, Java, MERN (comma separated)"
+                required
+              />
+            </div>
+
+            {/* Google Form field */}
+            <div>
+              <label htmlFor="googleFormLink" className="block text-sm font-medium text-gray-700 mb-1">Google Form Link</label>
+              <textarea
+                id="googleFormLink"
+                name="googleFormLink"
+                rows={1}
+                value={formData.googleFormLink}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500"
+                placeholder="Add your Google Form link for the intrested students."
                 required
               />
             </div>
