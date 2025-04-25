@@ -25,19 +25,19 @@ A professional alumni association web platform designed to bridge the gap betwee
 ## 🚀 Key Features
 
 - 🔐 **User Roles:**
-  - **Student:** Seek mentorship, referrals, ask questions, view events
-  - **Alumni:** Offer mentorship, give donations, answer FAQs, post referrals
+  - **Student:** Seek mentorship, internships, ask questions, view events, view alumnis (Hall of Fame)
+  - **Alumni:** Offer mentorship, give donations, answer FAQs, post referrals, request personalised
   - **Admin:** Approve users, manage events, and monitor portal activities
 
-- 💸 **Donation Portal:** Accept contributions from alumni to support college growth
+- 💸 **Donation Portal (Future Development):** Accept contributions from alumni to support college growth
 
 - 🎓 **Mentorship Hub:** Alumni can offer guidance on career, study, and startups
 
-- ❓ **Q&A Forum:** Students can ask questions, and alumni can respond with answers
+- ❓ **Q&A Forum:** A dedicated space where students and alumni can ask questions, with a static page for predefined answers to frequently asked questions.
 
-- 💼 **Referral System:** Alumni can post job/internship referrals for students
+- 💼 **Referral System:** Alumni can post internship referrals for students
 
-- 📅 **Event Hosting:** Organize and showcase upcoming alumni or college events
+- 📅 **Event Hosting (Future Development):** Organize and showcase upcoming alumni or college events
 
 ---
 
