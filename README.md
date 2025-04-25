@@ -49,9 +49,3 @@ A professional alumni association web platform designed to bridge the gap betwee
 - **Backend:** Node.js / Express.js
 - **Database:** Firebase / MongoDB
 - **Version Control:** Git & GitHub
-
----
-
-## 🎨 UI Design
-
-The platform follows a clean and professional color scheme:
