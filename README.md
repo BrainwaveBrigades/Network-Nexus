@@ -14,7 +14,7 @@ A professional alumni association web platform designed to bridge the gap betwee
 
 | Name               | Role        |
 |--------------------|-------------|
-| Abhi Trambadiya    | Full Stack  |
+| Abhi Trambadiya    | Backend     |
 | Atharva Shewale    | Backend     |
 | Tanish Patgaonkar  | Frontend    |
 | Tanishq Jain       | Frontend    |
