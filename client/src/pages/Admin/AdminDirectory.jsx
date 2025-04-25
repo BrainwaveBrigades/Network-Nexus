@@ -15,7 +15,7 @@ function App() {
   
   // Pagination state
   const [currentPage, setCurrentPage] = useState(1);
-  const [alumniPerPage] = useState(10);
+  const [alumniPerPage] = useState(20);
 
   const getAvatarUrl = (name) => {
     return `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(name)}&radius=50`;

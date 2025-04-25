@@ -133,9 +133,9 @@ function App() {
                   <h2 className="text-3xl font-bold text-gray-900 tracking-tight mb-1">{admin.name}</h2>
                   <p className="text-indigo-600 text-lg mb-3">{admin.email}</p>
                   <div className="flex flex-wrap justify-center md:justify-start items-center gap-2 mb-8">
-                    {/* <span className="px-4 py-1.5 bg-gray-100 text-gray-900 rounded-full text-sm font-medium border border-gray-200 hover:bg-gray-200 transition-colors">
+                    <span className="px-4 py-1.5 bg-gray-100 text-gray-900 rounded-full text-sm font-medium border border-gray-200 hover:bg-gray-200 transition-colors">
                       Department of {admin.department}
-                    </span> */}
+                    </span>
                     <span className="px-4 py-1.5 bg-gray-100 text-gray-900 rounded-full text-sm font-medium border border-gray-200 hover:bg-gray-200 transition-colors">
                       Faculty Member
                     </span>
