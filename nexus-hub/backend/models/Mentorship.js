@@ -73,6 +73,10 @@ const MentorshipSchema = new mongoose.Schema({
     required: true,
     index: true
   },
+  isMarkAsComplete: {
+    type: Boolean,
+    default: false
+  },
   participants: [ParticipantSchema],
   createdAt: {
     type: Date,

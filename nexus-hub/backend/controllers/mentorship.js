@@ -2,6 +2,7 @@ const Mentorship = require('../models/Mentorship');
 const ApiResponse = require('../utils/apiResponse');
 
 // Get mentorships with pagination, filtering and search
+// Get mentorships with pagination, filtering and search
 exports.getMentorships = async (req, res, next) => {
   try {
     const { 
@@ -18,7 +19,8 @@ exports.getMentorships = async (req, res, next) => {
     
     // Build query object
     const query = {
-      isApproved: true
+      isApproved: true,
+      isMarkedAsComplete: false // Add this condition
     };
     
     // Add filters if provided
